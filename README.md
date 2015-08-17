@@ -122,6 +122,22 @@ The following command will append the hosts to your `/etc/hosts` file.
 
         kubectl get rc,svc,po --all-namespaces -o wide
 
+- Check overall cluster components status
+
+        kubectl get componentStatuses
+
+- Check cluster services are running (UI, DNS, Logging, etc.)
+
+        kubectl cluster-info
+
+    Sample output:
+
+        Kubernetes master is running at https://k8s-master-01:443
+        Elasticsearch is running at https://k8s-master-01:443/api/v1/proxy/namespaces/kube-system/services/elasticsearch-logging
+        Kibana is running at https://k8s-master-01:443/api/v1/proxy/namespaces/kube-system/services/kibana-logging
+        KubeDNS is running at https://k8s-master-01:443/api/v1/proxy/namespaces/kube-system/services/kube-dns
+        KubeUI is running at https://k8s-master-01:443/api/v1/proxy/namespaces/kube-system/services/kube-ui
+
 - Check status of Kubernetes processes
 
         sudo systemctl status etcd kube-apiserver kube-controller-manager kube-scheduler -l
@@ -178,4 +194,5 @@ The following command will append the hosts to your `/etc/hosts` file.
 - Verify NAT settings
 
         sudo iptables -t nat -L -n -v
+
 
