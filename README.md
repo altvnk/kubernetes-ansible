@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/altvnk/kubernetes-ansible.png?label=ready&title=Ready)](https://waffle.io/altvnk/kubernetes-ansible)
 ## Install and configure Kubernetes on OpenStack using ansible and terraform
 
 ### Main goals
